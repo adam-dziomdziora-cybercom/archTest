@@ -2,27 +2,12 @@ version: '3.4'
 
 services:
   digivisio2030.ui:
-    #environment:
-    #  - ASPNETCORE_HTTPS_PORT=4433
-    #  - ASPNETCORE_ENVIRONMENT=Development
-    #  - ASPNETCORE_URLS=https://+:443;http://+:80
-    #  #- ASPNETCORE_HOSTINGSTARTUPASSEMBLIES=Microsoft.AspNetCore.SpaProxy
-    #  # - ASPNETCORE_Kestrel__Certificates__Default__Key=C:\https\digivisio2030.ui.key
-    #  # - ASPNETCORE_Kestrel__Certificates__Default__Path=C:\https\digivisio2030.ui.pem
     ports:
       - "44412:44412"
-    # volumes:
-    #  - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
-    #  - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
 
   digivisio2030.api:
-    environment:    
+    environment:
       - ASPNETCORE_HTTPS_PORT=4434
-      - ASPNETCORE_ENVIRONMENT=Development
-      # - ASPNETCORE_URLS=https://+:443;http://+:80
     ports:
       - "4433:80"
       - "4434:443"
-    # volumes:
-    #   - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
-    #   - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
